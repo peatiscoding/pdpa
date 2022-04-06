@@ -1,0 +1,15 @@
+version: '3.7'
+
+volumes:
+  pdpa-dynamodb-data:
+
+services:
+  dynamodb:
+    image:  amazon/dynamodb-local
+    hostname: dynamodb
+    restart: always
+    volumes:
+      -  pdpa-dynamodb-data:/home/dynamodblocal/data
+    ports:
+      - 8002:8000
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath /home/dynamodblocal/data/"
