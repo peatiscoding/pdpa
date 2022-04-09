@@ -73,4 +73,22 @@ export class HelloController extends BaseRoutedController {
       throw e
     }
   }
+  @Route({
+    method: 'delete',
+    path: '/cat/:id',
+    middlewares: [
+    ],
+  })
+  async delete(context: Context) {
+    const id = context.params.id
+    try {
+      const deleted = await CatModel.delete({
+        id: +id
+      })
+      return deleted
+    } catch (e) {
+      console.error(e)
+      throw e
+    }
+  }
 }
