@@ -5,6 +5,7 @@
   "main": "serverless.ts",
   "scripts": {
     "sls": "serverless",
+    "build": "serverless package",
     "dev": "serverless offline start --noPrependStageInUrl --stage local"
   },
   "engines": {
@@ -12,9 +13,9 @@
   },
   "dependencies": {
     "@koa/router": "^10.1.1",
+    "db": "*",
     "koa": "^2.13.4",
-    "kolp": "^1.1.3",
-    "db": "*"
+    "kolp": "^1.1.3"
   },
   "devDependencies": {
     "@serverless/typescript": "^3.8.0",
@@ -26,7 +27,7 @@
     "esbuild": "^0.14.32",
     "eslint": "7.32.0",
     "serverless": "^3.11.0",
-    "serverless-esbuild": "^1.26.1",
+    "serverless-esbuild": "^1.26.2",
     "serverless-offline": "^8.5.0",
     "ts-node": "^10.7.0",
     "tsconfig": "*",

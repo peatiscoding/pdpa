@@ -6629,10 +6629,10 @@ semver@^7.2.1, semver@^7.3.4, semver@^7.3.5:
   dependencies:
     lru-cache "^6.0.0"
 
-serverless-esbuild@^1.26.1:
-  version "1.26.1"
-  resolved "https://registry.npmjs.org/serverless-esbuild/-/serverless-esbuild-1.26.1.tgz#e666326d1b48219d9b32fbdfddfb4b5233b67f9d"
-  integrity sha512-OoOlR159HS0IQPmZAc4gMfiVw7BGnBT+BSXIYWvy3YY0NGmpW1l2yl/TFSV7ENQrH/OedoS76pFt8K7mWFcVRA==
+serverless-esbuild@^1.26.2:
+  version "1.26.2"
+  resolved "https://registry.npmjs.org/serverless-esbuild/-/serverless-esbuild-1.26.2.tgz#751fee753e3bcefa75d3610f18fdc257197ab89a"
+  integrity sha512-/Qqo2+NhBms+qKf94+9hCFgBOQxhgnVlJU4pKfFUhUmc1H7e6r58wjLwK3ohmoJJPZmoW5S45MsI9YbT0fn+HQ==
   dependencies:
     archiver "^5.3.0"
     bestzip "^2.2.0"

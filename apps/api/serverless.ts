@@ -4,6 +4,9 @@ import { hello } from '@lambdas/index'
 const serverlessConfiguration: AWS = {
   service: 'pdpa-maketh-api',
   frameworkVersion: '3',
+  package: {
+    individually: true,
+  },
   plugins: [
     'serverless-esbuild',
     'serverless-offline',
@@ -26,9 +29,6 @@ const serverlessConfiguration: AWS = {
         ],
       },
     },
-  },
-  package: {
-    individually: true,
   },
   custom: {
     esbuild: {
