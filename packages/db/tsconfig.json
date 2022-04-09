@@ -1,0 +1,13 @@
+{
+  "extends": "tsconfig/service.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "node_modules/**/*",
+  ],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+}

@@ -1,4 +1,4 @@
-import dynamoose from '@models/ddb'
+import dynamoose from './ddb'
 import { Document } from 'dynamoose/dist/Document'
 
 export class Cat extends Document {

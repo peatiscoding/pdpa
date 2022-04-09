@@ -1,8 +1,7 @@
 import type { Context } from 'koa'
 import { BaseRoutedController, Route } from 'kolp'
 
-import { CatModel } from '@models/cat.model'
-import { withDynamoDB } from '@middlewares/withDynamoDb'
+import { CatModel } from 'db'
 
 export class HelloController extends BaseRoutedController {
 
@@ -21,7 +20,6 @@ export class HelloController extends BaseRoutedController {
     method: 'post',
     path: '/cat',
     middlewares: [
-      withDynamoDB,
     ],
   })
   async create(context: Context) {
@@ -44,12 +42,35 @@ export class HelloController extends BaseRoutedController {
     method: 'get',
     path: '/cat/:id',
     middlewares: [
-      withDynamoDB,
     ],
   })
   async getOne(context: Context) {
     const id = context.params.id
     const fetched = await CatModel.get(+id);
     return fetched
+  }
+
+  @Route({
+    method: 'post',
+    path: '/cat/:id',
+    middlewares: [
+    ],
+  })
+  async update(context: Context) {
+    const id = context.params.id
+    const body = context.request.body
+    try {
+      const update = await CatModel.update({
+        "id": +id,
+      }, {
+        "name": body.name,
+      }, {
+        return: 'document',
+      });
+      return update
+    } catch (e) {
+      console.error(e)
+      throw e
+    }
   }
 }
