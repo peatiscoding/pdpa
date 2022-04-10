@@ -7,7 +7,7 @@ export class HelloController extends BaseRoutedController {
 
   @Route({
     method: 'get',
-    path: '/',
+    path: '/hi',
     middlewares: [],
   })
   async index(_context: Context) {
