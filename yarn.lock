@@ -2885,7 +2885,7 @@ duration@^0.2.2:
     d "1"
     es5-ext "~0.10.46"
 
-dynamodb-localhost@0.0.9:
+dynamodb-localhost@0.0.9, dynamodb-localhost@^0.0.9:
   version "0.0.9"
   resolved "https://registry.npmjs.org/dynamodb-localhost/-/dynamodb-localhost-0.0.9.tgz#1a1d32e85240615e77dcf9063a12b4050fdfca97"
   integrity sha512-Dug29xrAGGiZwyRwYLL+RcDfKAk+QW9k0imbG0DhqthJ8i9eVoTl18+6sv59B1JXFQfoBCfunYSAknbUUH2ozQ==
