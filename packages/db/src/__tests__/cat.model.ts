@@ -1,9 +1,6 @@
 import { CatModel } from "../models/cat.model"
 
 describe('model', () => {
-  beforeAll((done) => {
-    done()
-  })
 
   const testingId = Math.floor(Math.random() * 30000 + 30000)
 

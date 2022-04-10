@@ -16,6 +16,6 @@ const schema = new dynamoose.Schema({
   }
 })
 
-export const CatModel = dynamoose.model<Cat>("Cat", schema, {
+export const CatModel = dynamoose.model<Cat>(`${process.env.TABLE_NAME_CAT}`, schema, {
   create: true,
 })

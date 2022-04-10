@@ -12,6 +12,7 @@
     "dynamoose": "^2.8.5"
   },
   "devDependencies": {
+    "@types/dynamodb-localhost": "^0.0.0",
     "@types/jest": "^27.4.1",
     "config": "*",
     "jest": "^27.5.1",
