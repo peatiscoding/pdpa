@@ -1,5 +1,5 @@
 import type { AWS } from '@serverless/typescript'
-import { hello } from '@lambdas/index'
+import functions from '@lambdas/index'
 
 const serverlessConfiguration: AWS = {
   service: 'pdpa-maketh-api',
@@ -112,9 +112,7 @@ const serverlessConfiguration: AWS = {
       concurrency: 10,
     },
   },
-  functions: {
-    hello,
-  }
+  functions,
 }
 
 module.exports = serverlessConfiguration
