@@ -73,7 +73,7 @@ const serverlessConfiguration: AWS = {
             WriteCapacityUnits: 1,
           }
         }
-      }
+      },
     }
   },
   custom: {

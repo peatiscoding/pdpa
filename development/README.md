@@ -76,9 +76,12 @@ In Thailand our IT industry is ever growing business and it is growing fast. Now
         * `created_by` the apiKey or userId who's responsible for such changes.
         * `changes_json` changes: `keys: [_is_active, _is_outdated, decision]`
         * `summary`
+    * PrimaryKey: `[resource_id]`
     * DynamoDB
         * Primary HashKey: `t<_tenant_id>@c<customer_hash>`
-        * Primary SortKey: `<created_at>/csnt/<_consent_uuid>+<_consent_version>`
+        * Primary SortKey: `<created_at>`
+        * Secondary HashKey: `t<_tenant_id>@c<customer_hash>::/csnt/<_consent_uuid>+<_consent_version>`
+        * Secondary SortKey: `<created_at>`
 
 ### The APIs offered
 
