@@ -1,5 +1,5 @@
 import type { Context } from 'koa'
-import { BaseRoutedController, Route } from 'kolp'
+import { BaseRoutedController, Route, KolpError, ClientErrorCode } from 'kolp'
 
 import { CatModel } from 'db'
 
@@ -47,6 +47,9 @@ export class CatController extends BaseRoutedController {
   async getOne(context: Context) {
     const id = context.params.id
     const fetched = await CatModel.get(+id);
+    if (!fetched) {
+      throw KolpError.fromUserInput(ClientErrorCode.notFound, 'Resource not found')
+    }
     return fetched
   }
 
